@@ -1,0 +1,42 @@
+.Meal .content {
+    transform: scale(1);
+    transition: all .25s;
+}
+
+.Meal:hover .content {
+    transform: scale(1.1);
+}
+
+.Meal .position-absolute {
+    transform: rotate(0deg) scale(1);
+    transform-origin: center;
+    transition: all .25s;
+}
+
+.Meal:hover .position-absolute {
+    transform: rotate(-14deg) scale(1.32);
+}
+
+.Meal .text {
+    background-color: var(--soft);
+    transition: all 0.25s;
+}
+
+.Meal:hover .text {
+    background-color: var(--green);
+}
+
+.Meal .children {
+    color: var(--secondary);
+    transition: all 0.25s;
+}
+
+.Meal .title {
+    color: var(--dark);
+    transition: all 0.25s;
+}
+
+.Meal:hover .children,
+.Meal:hover .title {
+    color: var(--white);
+}
