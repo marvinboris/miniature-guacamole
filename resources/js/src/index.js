@@ -17,7 +17,7 @@ export const rootPath = '/api';
 
 const app = (
     <Provider store={store}>
-        <BrowserRouter basename={process.env.PUBLIC_HTML && "/bbq"}>
+        <BrowserRouter basename={process.env.MIX_ASSET_URL && "/bbq"}>
             <App />
         </BrowserRouter>
     </Provider>
