@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Card, CardBody } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircle, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faInstagram, faTwitterSquare, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 import './TeamMemberCard.css';
@@ -17,11 +18,11 @@ export default ({ name, title, animation = "fade-up", src }) => (
                         <span className="pr-2">{name}</span>
 
                         <div className="position-absolute border-bottom border-white-20" style={{ top: 13, left: -66, width: 61 }}>
-                            <FontAwesomeIcon icon="circle" className="text-xx-small position-absolute" style={{ right: 0, top: 0, transform: 'translateY(-50%)' }} />
+                            <FontAwesomeIcon icon={faCircle} className="text-xx-small position-absolute" style={{ right: 0, top: 0, transform: 'translateY(-50%)' }} />
                         </div>
 
                         <div className="position-relative border-bottom border-white-20 flex-fill" style={{ marginRight: -20 }}>
-                            <FontAwesomeIcon icon="play" className="text-xx-small text-yellow position-absolute" style={{ left: 0, top: 0, transform: 'translateY(-50%)' }} />
+                            <FontAwesomeIcon icon={faPlay} className="text-xx-small text-yellow position-absolute" style={{ left: 0, top: 0, transform: 'translateY(-50%)' }} />
                         </div>
                     </div>
                     <div className="card-text text-white text-montserrat-alt pb-1 mb-3">
