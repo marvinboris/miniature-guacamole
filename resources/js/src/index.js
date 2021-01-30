@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
@@ -15,7 +16,7 @@ import 'leaflet/dist/leaflet.css';
 
 export const rootPath = '/api';
 
-console.log(process.env.MIX_ASSET_URL)
+console.log('env', process.env.MIX_DEFAULT_LANG)
 
 const app = (
     <Provider store={store}>
@@ -25,7 +26,7 @@ const app = (
     </Provider>
 );
 
-ReactDOM.render(app, document.getElementById('app'));
+ReactDOM.render(hot(app), document.getElementById('app'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
