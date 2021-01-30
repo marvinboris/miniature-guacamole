@@ -15,6 +15,8 @@ import 'leaflet/dist/leaflet.css';
 
 export const rootPath = '/api';
 
+console.log(process.env.MIX_ASSET_URL)
+
 const app = (
     <Provider store={store}>
         <BrowserRouter basename={process.env.MIX_ASSET_URL ? "/bbq" : "/"}>
