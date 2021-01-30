@@ -16,7 +16,7 @@ import 'leaflet/dist/leaflet.css';
 
 export const rootPath = '/api';
 
-console.log('env', process.env.MIX_ASSET_URL)
+console.log('env', process.env.MIX_APP_ENV)
 
 const app = (
     <Provider store={store}>
