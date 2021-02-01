@@ -12,7 +12,7 @@ window.jQuery = window.$ = require('jquery');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-console.log(process.env.MIX_APP_ENV);
+window.APP_ENV = document.querySelector('meta[name=env]').content;
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
