@@ -7,7 +7,7 @@ import { faFacebookSquare, faInstagram, faTwitterSquare, faWhatsapp } from '@for
 import './TeamMemberCard.css';
 
 export default ({ name, title, animation = "fade-up", src }) => (
-    <Col data-aos={animation} xl={3} lg={4} md={6} className="TeamMemberCard">
+    <Col data-aos={animation} xl={3} lg={4} md={6} className="TeamMemberCard pb-3 pb-xl-0">
         <Card className="border-0 rounded-0 bg-transparent overflow-hidden position-relative">
             <div className="position-absolute w-100 h-100" style={{ background: `url('${src}') no-repeat center`, backgroundSize: 'cover' }} />
             <div className="card-img-top embed-responsive embed-responsive-1by1 bg-black" style={{ opacity: .3 }} />

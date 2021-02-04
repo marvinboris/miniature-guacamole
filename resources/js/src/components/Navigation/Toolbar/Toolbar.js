@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Collapse } from 'reactstrap';
-import { faCaretDown, faCircle, faDoorOpen, faEnvelope, faHeadset, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookSquare, faInstagram, faTwitterSquare, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import NavigationItems from '../NavigationItems/NavigationItems';
-import CenterButton from '../../UI/Button/CenterButton/CenterButton';
 import Logo from '../../UI/Logo/Logo';
 
 import './Toolbar.css';
 
 import MenuBar from '../../../assets/images/menu-bar.svg';
 
-export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartItemsNumber, notifications }) => {
+export default ({ }) => {
     const [collapsed, setCollapsed] = useState(true);
 
     const toggleNavbar = () => setCollapsed(!collapsed);
@@ -23,7 +21,7 @@ export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartIt
         </div>
 
         <div className="d-flex justify-content-between align-items-center">
-            <div className="mr-5 pr-5">
+            <div className="d-none d-lg-block mr-5 pr-5">
                 <a href="tel:(+237) 693886386" className="d-flex align-items-center text-dark text-small text-decoration-none">
                     <div className="embed-responsive embed-responsive-1by1 rounded-circle border border-2 mr-2 border-dark d-flex justify-content-center align-items-center" style={{ width: 28 }}>
                         <FontAwesomeIcon icon={faPhone} />
@@ -33,7 +31,12 @@ export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartIt
                 </a>
             </div>
 
-            <NavigationItems font="dark" toggleNavbar={toggleNavbar} />
+            <div className="d-lg-none ml-auto text-dark">
+                <img src={MenuBar} alt="Menu bar" style={{ cursor: 'pointer' }} onClick={toggleNavbar} className="p-1 bg-black-50 rounded-lg" />
+            </div>
+            <div className="d-none d-lg-block">
+                <NavigationItems font="dark" toggleNavbar={toggleNavbar} />
+            </div>
         </div>
     </div>;
 
@@ -43,7 +46,7 @@ export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartIt
         </div>
 
         <div className="d-lg-none">
-            <Collapse isOpen={!collapsed} navbar>
+            <Collapse isOpen={!collapsed} navbar className="bg-soft shadow-sm">
                 <NavigationItems font="dark" toggleNavbar={toggleNavbar} />
             </Collapse>
         </div>

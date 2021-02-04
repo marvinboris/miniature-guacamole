@@ -75,16 +75,21 @@ class Home extends Component {
                                 SWEET BARBECUE ARE BAKED IN HEAVEN
                             </div>
 
-                            <div className="row justify-content-center mb-4 text-large">
+                            <div className="row justify-content-center mx-0 mb-4 text-large px-5 px-md-0">
                                 <div className="col-xl-8 col-lg-9 col-md-10 col-sm-11">
                                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                                     doloremque laudatium, totam rem aperiam, eaque ipsa
                                 </div>
                             </div>
 
-                            <div>
-                                <Link className="text-400 text-large rounded-2 btn btn-xl px-4 py-2 btn-green text-decoration-none mr-xl-3 mr-0" to="/contact">Contact us</Link>
-                                <Link className="text-400 text-large rounded-2 btn btn-xl px-4 py-2 btn-white text-decoration-none" to="/purchase">Order now</Link>
+                            <div className="d-md-flex justify-content-center">
+                                <div className="mr-lg-3 mr-0 mb-3 mb-lg-0">
+                                    <Link className="text-400 text-large rounded-2 btn btn-xl px-4 py-2 btn-green text-decoration-none" to="/contact">Contact us</Link>
+                                </div>
+
+                                <div>
+                                    <Link className="text-400 text-large rounded-2 btn btn-xl px-4 py-2 btn-white text-decoration-none" to="/purchase">Order now</Link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -231,7 +236,7 @@ class Home extends Component {
                     <div>Explore the tasty collections of Miodis Cakes</div>
                 </div>
 
-                <div className="row">
+                <div className="row justify-content-center">
                     <TeamMemberCard name="First One" title="Managing Director" src={ImgTeam1} />
                     <TeamMemberCard name="Second One" title="Senior Accountant" src={ImgCustomer1} />
                     <TeamMemberCard name="Third One" title="Graphic Designer" src={ImgTeam2} />

@@ -17,7 +17,7 @@ const Stack = ({ icon, className = '' }) => <span className="fa-stack">
 const footer = () => (
     <div className="Footer">
         <footer className="container-fluid px-5 bg-black text-light py-5">
-            <div className="container d-flex justify-content-between align-items-center">
+            <div className="container d-md-flex justify-content-between align-items-center">
                 <div className="h-100 d-flex flex-column justify-content-between">
                     <div><Logo big /></div>
 
@@ -40,7 +40,7 @@ const footer = () => (
                     </div>
                 </div>
 
-                <div className="text-white">
+                <div className="text-white my-5 my-md-0">
                     <div>
                         <div className="h3 mb-4">Opening Hours</div>
 
@@ -68,16 +68,16 @@ const footer = () => (
         <footer className="container-fluid px-5 bg-dark text-light py-4">
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-lg-10 col-xl-8 d-flex">
+                    <div className="col-lg-10 col-xl-8 text-center d-none d-md-flex">
                         <div>&copy; {(new Date()).getFullYear()} All rights reserved.</div>
-                    </div>
 
-                    <div>
-                        <div className="text-green">
-                            <Stack icon={faFacebookF} />
-                            <Stack icon={faInstagram} />
-                            <Stack icon={faTelegramPlane} />
-                            <Stack icon={faTwitter} />
+                        <div>
+                            <div className="text-green">
+                                <Stack icon={faFacebookF} />
+                                <Stack icon={faInstagram} />
+                                <Stack icon={faTelegramPlane} />
+                                <Stack icon={faTwitter} />
+                            </div>
                         </div>
                     </div>
                 </div>
